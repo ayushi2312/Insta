@@ -1,19 +1,37 @@
-const db = require("../../shared/config/db")
+// const db = require("../../shared/config/db")
 
-exports.signup = async (req,resp) => {
-    try{
-        const {username, email, password} = req.body;
-        const [result] = await db.query(
-            "Insert into users (username, email, password) VALUES (?,?,?)",[username, email, password]
-        )
+// exports.signup = async (req,resp) => {
+//     try{
+//         const {username, email, password} = req.body;
+//         const [result] = await db.query(
+//             "Insert into users (username, email, password) VALUES (?,?,?)",[username, email, password]
+//         )
 
-        resp.json({
-            message:"User created successfully",
-            userId: result.insertId
-        })
-    } catch (error) {
-        console.log(error);
-        resp.status(500).json({error: "Database error"})
+//         resp.json({
+//             message:"User created successfully",
+//             userId: result.insertId
+//         })
+//     } catch (error) {
+//         console.log(error);
+//         resp.status(500).json({error: "Database error"})
         
+//     }
+// }
+
+const login = async (req,resp) => {
+    try{
+        resp.send("Login Api got hitted")
+    } catch {
+
     }
 }
+
+const signup = async (req,resp) => {
+    try{
+        resp.send("Signup Api got hitted")
+    } catch {
+
+    }
+}
+
+module.exports = {login, signup}

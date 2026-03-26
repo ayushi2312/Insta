@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "start:all": "concurrently \"npm run start:auth\" \"npm run start:user\" \"npm run start:post\" \"npm run start:media\"",
-    "start:auth": "cd auth-service && node server.js",
-    "start:user": "cd user-service && node server.js",
-    "start:post": "cd post-service && node server.js",
-    "start:media": "cd media-service && node server.js"
+    "start:auth": "cd auth-service && nodemon server.js",
+    "start:user": "cd user-service && nodemon server.js",
+    "start:post": "cd post-service && nodemon server.js",
+    "start:media": "cd media-service && nodemon server.js"
   },
   "devDependencies": {
     "concurrently": "^8.2.0"

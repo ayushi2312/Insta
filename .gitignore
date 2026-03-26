@@ -1,4 +1,8 @@
 # Backend (Node.js)
+Backend/auth-service/node_modules/
+Backend/media-service/node_modules/
+Backend/post-service/node_modules/
+Backend/user-service/node_modules/
 Backend/node_modules/
 
 
